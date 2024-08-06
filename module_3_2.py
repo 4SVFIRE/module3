@@ -6,7 +6,7 @@ def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
     if not any(i in recipient for i in email) or not any(i in sender for i in email):
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}.')
         return
-    elif recipient == sender:
+    if recipient == sender:
         print('Нельзя отправить письмо самому себе!')
     elif sender == 'university.help@gmail.com':
         print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}.')
